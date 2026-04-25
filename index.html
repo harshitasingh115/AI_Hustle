@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 AI Side Hustles — Full Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;0,900;1,700&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --cream:#fff8f3;
+  --blush:#ffe8f0;
+  --rose:#d4537e;
+  --peach:#f48060;
+  --amber:#c07820;
+  --leaf:#3a7a40;
+  --text:#2a1010;
+  --muted:#7a5040;
+  --border:rgba(180,80,60,0.15);
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden}
+
+/* ── BG PATTERN ── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:radial-gradient(circle at 15% 10%,rgba(255,180,150,0.18) 0%,transparent 45%),
+    radial-gradient(circle at 85% 20%,rgba(255,160,200,0.14) 0%,transparent 40%),
+    radial-gradient(circle at 10% 80%,rgba(160,200,140,0.12) 0%,transparent 35%),
+    radial-gradient(circle at 90% 75%,rgba(255,200,140,0.14) 0%,transparent 40%);
+  pointer-events:none;z-index:0;
+}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,248,243,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0;height:58px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:900;color:var(--rose);white-space:nowrap;margin-right:24px;flex-shrink:0}
+.nav-tabs{display:flex;gap:4px}
+.nav-tab{padding:6px 13px;border-radius:99px;font-size:12px;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);white-space:nowrap;transition:all .2s;flex-shrink:0}
+.nav-tab:hover{background:rgba(212,83,126,0.08);color:var(--rose)}
+.nav-tab.active{background:var(--rose);color:#fff}
+
+/* ── HERO ── */
+.hero{position:relative;z-index:1;text-align:center;padding:64px 24px 48px;max-width:760px;margin:0 auto}
+.hero-badge{display:inline-block;background:rgba(212,83,126,0.1);border:1px solid rgba(212,83,126,0.3);border-radius:99px;padding:6px 18px;font-family:'Caveat',cursive;font-size:16px;color:var(--rose);margin-bottom:20px}
+.hero-title{font-family:'Fraunces',serif;font-size:clamp(38px,6vw,66px);font-weight:900;line-height:0.95;letter-spacing:-2px;color:var(--text);margin-bottom:12px}
+.hero-title em{color:var(--rose);font-style:italic}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.7;max-width:520px;margin:0 auto 32px;font-weight:600}
+.hero-stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hstat{background:#fff;border:1px solid var(--border);border-radius:20px;padding:14px 22px;text-align:center}
+.hstat-n{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--rose)}
+.hstat-l{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-top:2px}
+
+/* ── HUSTLE INDEX GRID ── */
+.index-section{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px 48px}
+.section-label{font-family:'Caveat',cursive;font-size:20px;color:var(--rose);margin-bottom:16px;text-align:center}
+.index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.index-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:16px 18px;cursor:pointer;transition:all .25s;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px}
+.index-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(180,60,60,0.12);border-color:var(--rose)}
+.ic-emoji{font-size:28px;flex-shrink:0;line-height:1}
+.ic-name{font-family:'Fraunces',serif;font-size:14px;font-weight:800;color:var(--text);line-height:1.2}
+.ic-earn{font-size:11px;font-weight:700;color:var(--muted);margin-top:2px}
+
+/* ── HUSTLE SECTION ── */
+.hustle-section{position:relative;z-index:1;max-width:1100px;margin:0 auto 64px;padding:0 24px;scroll-margin-top:80px}
+.hs-header{display:flex;gap:20px;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap}
+.hs-emoji-wrap{width:80px;height:80px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:40px;flex-shrink:0}
+.hs-title-block{flex:1;min-width:200px}
+.hs-num{font-family:'Caveat',cursive;font-size:14px;margin-bottom:4px}
+.hs-name{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,40px);font-weight:900;line-height:1;letter-spacing:-1px;margin-bottom:6px}
+.hs-tagline{font-size:14px;font-weight:600;font-style:italic;color:var(--muted);margin-bottom:10px}
+.hs-quote{font-family:'Caveat',cursive;font-size:15px;line-height:1.5;padding:10px 16px;border-radius:12px;display:inline-block}
+.level-badge{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:4px 12px;border-radius:99px;margin-left:8px;vertical-align:middle}
+
+/* ── DIVIDER ── */
+.hs-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 0 32px}
+
+/* ── ROADMAP ── */
+.roadmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:32px}
+.rm-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:20px;position:relative;overflow:hidden;transition:box-shadow .2s}
+.rm-card:hover{box-shadow:0 8px 24px rgba(180,60,60,0.1)}
+.rm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:3px 3px 0 0}
+.rm-stage{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.rm-week{font-family:'Fraunces',serif;font-size:22px;font-weight:900;margin-bottom:6px}
+.rm-title{font-size:14px;font-weight:800;margin-bottom:6px;color:var(--text)}
+.rm-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px;font-weight:600}
+.rm-resources{display:flex;flex-direction:column;gap:6px}
+.rm-res-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(0,0,0,0.35);margin-bottom:4px}
+.rm-res-link{display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:10px;text-decoration:none;font-size:12px;font-weight:700;transition:all .18s;border:1px solid transparent}
+.rm-res-link:hover{transform:translateX(3px)}
+.rm-res-icon{width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+
+/* ── TOOLS ROW ── */
+.tools-section{background:#fff;border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:20px}
+.tools-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px}
+.tools-grid{display:flex;flex-wrap:wrap;gap:10px}
+.tool-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--border);background:var(--cream);text-decoration:none;transition:all .2s;font-size:13px;font-weight:700;color:var(--text)}
+.tool-chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(180,60,60,0.1)}
+.tool-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+
+/* ── INCOME TRACK ── */
+.income-track{background:#fff;border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:32px}
+.income-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:16px}
+.income-bars{display:flex;flex-direction:column;gap:10px}
+.income-bar-row{display:flex;align-items:center;gap:12px}
+.income-bar-label{font-size:12px;font-weight:700;width:68px;flex-shrink:0;color:var(--muted)}
+.income-bar-track{flex:1;height:22px;background:#f5ece8;border-radius:99px;overflow:hidden;position:relative}
+.income-bar-fill{height:100%;border-radius:99px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:11px;font-weight:800;color:#fff;transition:width 1s cubic-bezier(.4,0,.2,1)}
+.income-bar-fill.animate{width:0!important}
+
+/* ── TIPS BLOCK ── */
+.tips-block{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:32px}
+.tip-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px}
+.tip-icon{font-size:22px;margin-bottom:8px}
+.tip-title{font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px}
+.tip-text{font-size:12px;color:var(--muted);line-height:1.55;font-weight:600}
+
+/* ── FOOTER ── */
+.footer{position:relative;z-index:1;text-align:center;padding:48px 24px;border-top:1px solid var(--border)}
+.footer-title{font-family:'Fraunces',serif;font-size:36px;font-weight:900;color:var(--text);margin-bottom:8px}
+.footer-title em{color:var(--rose);font-style:italic}
+.footer-sub{font-family:'Caveat',cursive;font-size:18px;color:var(--muted);margin-bottom:24px}
+.footer-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.ftag{background:#fff;border:1px solid var(--border);border-radius:99px;font-size:12px;font-weight:700;color:var(--muted);padding:6px 14px}
+
+/* ── FLORAL SVG DIVIDERS ── */
+.floral-divider{display:flex;justify-content:center;align-items:center;gap:16px;padding:8px 0 24px;opacity:0.55}
+.floral-divider svg{width:48px;height:48px}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .roadmap-grid{grid-template-columns:1fr}
+  .index-grid{grid-template-columns:1fr 1fr}
+  .hero-stats{gap:10px}
+  .hstat{padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">🌸 AI Hustles</div>
+    <div class="nav-tabs" id="navTabs"></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="hero-badge">from scratch → expert · 10 roadmaps</div>
+  <h1 class="hero-title">Your <em>complete</em><br>AI hustle roadmap</h1>
+  <p class="hero-sub">Every resource. Every step. Every tool. No guessing — just follow the path from day one to your first paycheck.</p>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-n">10</div><div class="hstat-l">Hustles</div></div>
+    <div class="hstat"><div class="hstat-n">40+</div><div class="hstat-l">Free Resources</div></div>
+    <div class="hstat"><div class="hstat-n">$0</div><div class="hstat-l">To Start</div></div>
+    <div class="hstat"><div class="hstat-n">90</div><div class="hstat-l">Days to Income</div></div>
+  </div>
+</section>
+
+<!-- SVG FLORAL DIVIDER -->
+<div class="floral-divider">
+  <svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="10" ry="6" fill="#f9a8c0" transform="rotate(0 24 10)"/><ellipse cx="37" cy="19" rx="10" ry="6" fill="#fbb97a" transform="rotate(60 37 19)"/><ellipse cx="37" cy="34" rx="10" ry="6" fill="#d4a0c0" transform="rotate(120 37 34)"/><ellipse cx="24" cy="42" rx="10" ry="6" fill="#f9a8c0" transform="rotate(180 24 42)"/><ellipse cx="11" cy="34" rx="10" ry="6" fill="#8ab87a" transform="rotate(240 11 34)"/><ellipse cx="11" cy="19" rx="10" ry="6" fill="#fbb97a" transform="rotate(300 11 19)"/><circle cx="24" cy="26" r="7" fill="#fff5ee"/><circle cx="24" cy="26" r="4" fill="#f4c070"/></svg>
+  <svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="10" ry="6" fill="#fbb97a" transform="rotate(30 24 10)"/><ellipse cx="37" cy="19" rx="10" ry="6" fill="#f9a8c0" transform="rotate(90 37 19)"/><ellipse cx="37" cy="34" rx="10" ry="6" fill="#8ab87a" transform="rotate(150 37 34)"/><ellipse cx="24" cy="42" rx="10" ry="6" fill="#d4a0c0" transform="rotate(210 24 42)"/><ellipse cx="11" cy="34" rx="10" ry="6" fill="#fbb97a" transform="rotate(270 11 34)"/><ellipse cx="11" cy="19" rx="10" ry="6" fill="#f9a8c0" transform="rotate(330 11 19)"/><circle cx="24" cy="26" r="7" fill="#fff5ee"/><circle cx="24" cy="26" r="4" fill="#f48070"/></svg>
+  <svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="10" ry="6" fill="#d4a0c0" transform="rotate(-15 24 10)"/><ellipse cx="37" cy="19" rx="10" ry="6" fill="#f9a8c0" transform="rotate(45 37 19)"/><ellipse cx="37" cy="34" rx="10" ry="6" fill="#fbb97a" transform="rotate(105 37 34)"/><ellipse cx="24" cy="42" rx="10" ry="6" fill="#8ab87a" transform="rotate(165 24 42)"/><ellipse cx="11" cy="34" rx="10" ry="6" fill="#f9a8c0" transform="rotate(225 11 34)"/><ellipse cx="11" cy="19" rx="10" ry="6" fill="#d4a0c0" transform="rotate(285 11 19)"/><circle cx="24" cy="26" r="7" fill="#fff5ee"/><circle cx="24" cy="26" r="4" fill="#8ab87a"/></svg>
+</div>
+
+<!-- INDEX GRID -->
+<section class="index-section reveal">
+  <div class="section-label">jump to any hustle</div>
+  <div class="index-grid" id="indexGrid"></div>
+</section>
+
+<!-- HUSTLE SECTIONS (injected by JS) -->
+<div id="hustleSections"></div>
+
+<!-- FOOTER -->
+<footer class="footer reveal">
+  <div class="footer-title">You just need to <em>start</em></div>
+  <div class="footer-sub">one hustle · one hour · one tab open today</div>
+  <div class="footer-tags">
+    <span class="ftag">🌸 work from home</span>
+    <span class="ftag">🤖 AI-powered</span>
+    <span class="ftag">💐 nap-time friendly</span>
+    <span class="ftag">🌿 no tech degree needed</span>
+    <span class="ftag">💰 real income</span>
+    <span class="ftag">🌺 beginner welcome</span>
+  </div>
+</footer>
+
+<script>
+const HUSTLES = [
+  {
+    id:'prompt', emoji:'🤖', name:'Prompt Engineering', num:'01',
+    tagline:'Talk to AI for a living — and get paid really well for it',
+    quote:'"I had zero tech skills. Now I sell AI prompts during my baby\'s nap time." — Sarah, mom of 2',
+    level:'Beginner', levelColor:'#d4537e',
+    accent:'#d4537e', accentLight:'#fce8f0', accentBorder:'#f4a0c0', textDark:'#5a1030',
+    earn:[{label:'Starter',val:'$300/mo',pct:15},{label:'Growing',val:'$1,500/mo',pct:40},{label:'Expert',val:'$6,000/mo',pct:100}],
+    vibe:'works during nap time',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Learn how prompts actually work',
+        desc:'You don\'t write code — you write instructions. Practice every day for 30 min on free tools.',
+        color:'#f9e8f0', bar:'#d4537e',
+        resources:[
+          {name:'Learn Prompting (free guide)',url:'https://learnprompting.org',icon:'📖',bg:'#fce8f0',tc:'#903050'},
+          {name:'Claude.ai — free tier',url:'https://claude.ai',icon:'🤖',bg:'#fce8f0',tc:'#903050'},
+          {name:'ChatGPT — free tier',url:'https://chat.openai.com',icon:'💬',bg:'#fce8f0',tc:'#903050'},
+          {name:'YouTube: Prompt Engineering 101',url:'https://www.youtube.com/results?search_query=prompt+engineering+beginners',icon:'▶️',bg:'#fce8f0',tc:'#903050'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create your first 10 prompt packs',
+        desc:'Pick one niche you love (parenting, recipes, social media). Write 10 prompts. Test them obsessively.',
+        color:'#fdf0e8', bar:'#f48060',
+        resources:[
+          {name:'PromptBase — see what sells',url:'https://promptbase.com',icon:'🛍️',bg:'#fff0e0',tc:'#804020'},
+          {name:'Notion — free to organize prompts',url:'https://notion.so',icon:'📝',bg:'#fff0e0',tc:'#804020'},
+          {name:'FlowGPT — prompt inspiration',url:'https://flowgpt.com',icon:'💡',bg:'#fff0e0',tc:'#804020'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'List and make your first sale',
+        desc:'Upload to PromptBase or Gumroad. Screenshot your results as proof. Post on Instagram. First sale = $5 to start.',
+        color:'#f0f8e8', bar:'#3a7a40',
+        resources:[
+          {name:'PromptBase — sell prompts',url:'https://promptbase.com/sell',icon:'💰',bg:'#e8f5e0',tc:'#2a5020'},
+          {name:'Gumroad — sell digital products',url:'https://gumroad.com',icon:'🏪',bg:'#e8f5e0',tc:'#2a5020'},
+          {name:'Instagram content ideas',url:'https://www.instagram.com/explore/tags/promptengineering/',icon:'📸',bg:'#e8f5e0',tc:'#2a5020'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Build custom systems for businesses',
+        desc:'Businesses pay $500–$2,000 for a full prompt library. Reach out to 5 small businesses per week.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Upwork — find clients',url:'https://upwork.com',icon:'💼',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'LinkedIn — build your profile',url:'https://linkedin.com',icon:'👔',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Prompt Engineering course — DeepLearning.AI',url:'https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/',icon:'🎓',bg:'#ece8fe',tc:'#4a1a80'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Claude',url:'https://claude.ai',icon:'🤖',bg:'#f0e8fe'},
+      {name:'ChatGPT',url:'https://chat.openai.com',icon:'💬',bg:'#e8f0fe'},
+      {name:'PromptBase',url:'https://promptbase.com',icon:'🛍️',bg:'#fee8f0'},
+      {name:'Gumroad',url:'https://gumroad.com',icon:'🏪',bg:'#e8fee8'},
+      {name:'Midjourney',url:'https://midjourney.com',icon:'🎨',bg:'#fef0e8'},
+    ],
+    tips:[
+      {icon:'💡',title:'Start with your own life',text:'Write prompts for things you already do — meal planning, bedtime routines, budgeting. You know these topics inside out.'},
+      {icon:'📸',title:'Screenshot everything',text:'Every great result you get from AI is proof. Build a portfolio of screenshots before you sell anything.'},
+      {icon:'🎯',title:'Niche wins',text:'Don\'t sell "marketing prompts." Sell "Instagram caption prompts for handmade candle shops." Specific beats general every time.'},
+    ]
+  },
+  {
+    id:'writing', emoji:'✍️', name:'AI Content Writing', num:'02',
+    tagline:'Write faster with AI — charge the same, work half the hours',
+    quote:'"I use Claude to write blogs 10x faster. My clients have no idea. My bank account loves it." — Priya, freelance writer',
+    level:'Beginner', levelColor:'#c07820',
+    accent:'#c07820', accentLight:'#fff0d0', accentBorder:'#f0c060', textDark:'#4a2a00',
+    earn:[{label:'Starter',val:'$500/mo',pct:15},{label:'Growing',val:'$2,000/mo',pct:40},{label:'Expert',val:'$8,000/mo',pct:100}],
+    vibe:'write between school runs',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Master AI-assisted writing',
+        desc:'Use Claude to draft articles, then edit them to sound like you. Practice with topics you love.',
+        color:'#fff8e8', bar:'#c07820',
+        resources:[
+          {name:'Claude.ai — free writing tool',url:'https://claude.ai',icon:'✍️',bg:'#fff0d0',tc:'#7a4000'},
+          {name:'HubSpot Blog Ideas Generator',url:'https://www.hubspot.com/blog-topic-generator',icon:'💡',bg:'#fff0d0',tc:'#7a4000'},
+          {name:'Hemingway Editor — readability',url:'https://hemingwayapp.com',icon:'📖',bg:'#fff0d0',tc:'#7a4000'},
+          {name:'Coursera: Content Writing free',url:'https://www.coursera.org/search?query=content+writing',icon:'🎓',bg:'#fff0d0',tc:'#7a4000'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create your portfolio (5 articles)',
+        desc:'Write 5 polished articles on topics you know. Publish free on Medium. This is your proof of work.',
+        color:'#f8fff0', bar:'#3a7a40',
+        resources:[
+          {name:'Medium — publish for free',url:'https://medium.com/new-story',icon:'📝',bg:'#e8f8d0',tc:'#2a5010'},
+          {name:'SurferSEO — free SEO analysis',url:'https://surferseo.com',icon:'🔍',bg:'#e8f8d0',tc:'#2a5010'},
+          {name:'Google Search Console — free',url:'https://search.google.com/search-console',icon:'📊',bg:'#e8f8d0',tc:'#2a5010'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Land your first paying client',
+        desc:'Apply on Upwork. Offer ONE free article. Then charge $75–$200 per article. Five clients = $1,000/mo.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Upwork — get writing jobs',url:'https://upwork.com',icon:'💼',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Fiverr — writing gigs',url:'https://fiverr.com',icon:'🎯',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'ProBlogger Job Board',url:'https://problogger.com/jobs/',icon:'💰',bg:'#ece8fe',tc:'#4a1a80'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Retainer clients + content strategy',
+        desc:'Bundle writing with SEO strategy. Charge $2,000–$5,000/mo per client. 3 clients = $6,000–$15,000/mo.',
+        color:'#fee8e8', bar:'#c03030',
+        resources:[
+          {name:'Jasper — AI writing platform',url:'https://jasper.ai',icon:'🤖',bg:'#fee8e0',tc:'#801010'},
+          {name:'Ahrefs — free SEO tools',url:'https://ahrefs.com/free-seo-tools',icon:'📈',bg:'#fee8e0',tc:'#801010'},
+          {name:'Content Marketing Institute',url:'https://contentmarketinginstitute.com',icon:'🎓',bg:'#fee8e0',tc:'#801010'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Claude',url:'https://claude.ai',icon:'🤖',bg:'#f0e8fe'},
+      {name:'SurferSEO',url:'https://surferseo.com',icon:'🔍',bg:'#e8f5e0'},
+      {name:'Jasper',url:'https://jasper.ai',icon:'✨',bg:'#fee8f0'},
+      {name:'Upwork',url:'https://upwork.com',icon:'💼',bg:'#e8f0fe'},
+      {name:'Medium',url:'https://medium.com',icon:'📝',bg:'#f5f0e8'},
+    ],
+    tips:[
+      {icon:'🤫',title:'AI is your secret weapon',text:'Write 3x more content in half the time. You still add your voice, opinions, and edits. Clients pay for quality, not method.'},
+      {icon:'📊',title:'Learn basic SEO',text:'Clients pay double for writers who understand SEO. Spend 2 hours on a free YouTube SEO course — it\'s worth thousands.'},
+      {icon:'💌',title:'Cold email works',text:'"Hey [name], I noticed your blog hasn\'t posted in 3 weeks. I write SEO articles for SaaS companies. Want one sample?" — simple wins.'},
+    ]
+  },
+  {
+    id:'design', emoji:'🎨', name:'AI Image Design', num:'03',
+    tagline:'Type what you imagine — AI paints it — you sell it',
+    quote:'"I made $400 in my first week selling AI art prints on Etsy. I was actually shaking." — Mei, stay-at-home mom',
+    level:'Beginner', levelColor:'#7c3aab',
+    accent:'#7c3aab', accentLight:'#ede8fe', accentBorder:'#c0a0e0', textDark:'#2e0a4a',
+    earn:[{label:'Starter',val:'$200/mo',pct:12},{label:'Growing',val:'$2,000/mo',pct:45},{label:'Expert',val:'$8,000/mo',pct:100}],
+    vibe:'create during quiet hours',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Learn Midjourney in 1 hour a day',
+        desc:'Sign up for Midjourney ($10/mo). Spend 1 hour daily prompting. Focus on one style: floral art, portraits, or product mockups.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Midjourney — sign up',url:'https://midjourney.com',icon:'🎨',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Midjourney beginner guide',url:'https://docs.midjourney.com/docs/quick-start',icon:'📖',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'DALL-E 3 via ChatGPT (free)',url:'https://chat.openai.com',icon:'🖼️',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'YouTube: Midjourney for beginners',url:'https://www.youtube.com/results?search_query=midjourney+beginner+2024',icon:'▶️',bg:'#ece8fe',tc:'#4a1a80'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create 20 pieces in your niche',
+        desc:'Floral prints, baby nursery art, book covers, or phone wallpapers are top sellers. Build a cohesive collection.',
+        color:'#fdf0e8', bar:'#f48060',
+        resources:[
+          {name:'Canva — edit and resize AI art',url:'https://canva.com',icon:'✏️',bg:'#fff0e0',tc:'#804020'},
+          {name:'Adobe Firefly — free AI art',url:'https://firefly.adobe.com',icon:'🔥',bg:'#fff0e0',tc:'#804020'},
+          {name:'Erank — Etsy keyword research',url:'https://erank.com',icon:'🔍',bg:'#fff0e0',tc:'#804020'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Open your Etsy shop today',
+        desc:'List as digital downloads — no printing, no shipping. First listing takes 20 minutes. Price at $3–$8 per download.',
+        color:'#e8f8e8', bar:'#3a7a40',
+        resources:[
+          {name:'Etsy — open a shop free',url:'https://etsy.com/sell',icon:'🛍️',bg:'#d8f0d0',tc:'#1a4810'},
+          {name:'Creative Market — sell design assets',url:'https://creativemarket.com',icon:'💎',bg:'#d8f0d0',tc:'#1a4810'},
+          {name:'Mockup World — free product mockups',url:'https://www.mockupworld.co',icon:'📦',bg:'#d8f0d0',tc:'#1a4810'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Brand kits for small businesses',
+        desc:'Package: logo + social templates + brand colors = $500–$3,000. Use Midjourney + Canva. Pitch local businesses.',
+        color:'#fee8f0', bar:'#d4537e',
+        resources:[
+          {name:'Fiverr — sell design services',url:'https://fiverr.com',icon:'💼',bg:'#fee0e8',tc:'#802040'},
+          {name:'99designs — branding projects',url:'https://99designs.com',icon:'🏆',bg:'#fee0e8',tc:'#802040'},
+          {name:'Behance — build portfolio',url:'https://behance.net',icon:'✨',bg:'#fee0e8',tc:'#802040'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Midjourney',url:'https://midjourney.com',icon:'🎨',bg:'#f0e8fe'},
+      {name:'DALL-E 3',url:'https://chat.openai.com',icon:'🖼️',bg:'#e8f0fe'},
+      {name:'Canva',url:'https://canva.com',icon:'✏️',bg:'#fee8f0'},
+      {name:'Etsy',url:'https://etsy.com',icon:'🛍️',bg:'#e8fee8'},
+      {name:'Creative Market',url:'https://creativemarket.com',icon:'💎',bg:'#fff0e8'},
+    ],
+    tips:[
+      {icon:'🌸',title:'Floral & nature themes sell',text:'Botanical prints, watercolor florals, and cottagecore designs are consistent best-sellers on Etsy. Start here.'},
+      {icon:'📐',title:'Size matters for downloads',text:'Always offer multiple sizes: 8x10, 5x7, A4. Bundle them together. Buyers love ready-to-print options.'},
+      {icon:'⭐',title:'Reviews = sales',text:'Send friends your first listings for honest reviews. 5 reviews in the first week makes the algorithm love you.'},
+    ]
+  },
+  {
+    id:'voice', emoji:'🎙️', name:'AI Voiceover Creator', num:'04',
+    tagline:'Your voice is a business — let AI scale it everywhere',
+    quote:'"I\'m shy IRL. AI voiceover gave me a voice people pay to hear. Absolutely wild." — Tanya, introvert mom',
+    level:'Beginner', levelColor:'#c03820',
+    accent:'#c03820', accentLight:'#ffe8e0', accentBorder:'#f0a090', textDark:'#4a0c08',
+    earn:[{label:'Starter',val:'$400/mo',pct:18},{label:'Growing',val:'$1,800/mo',pct:45},{label:'Expert',val:'$6,000/mo',pct:100}],
+    vibe:'record after bedtime',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Generate your first 10 samples',
+        desc:'Sign up for ElevenLabs free tier. Create samples in different styles: warm narrator, energetic ad, calm explainer.',
+        color:'#ffe8e0', bar:'#c03820',
+        resources:[
+          {name:'ElevenLabs — free voiceover AI',url:'https://elevenlabs.io',icon:'🎙️',bg:'#ffe0d8',tc:'#801810'},
+          {name:'Murf.ai — AI voice studio',url:'https://murf.ai',icon:'🔊',bg:'#ffe0d8',tc:'#801810'},
+          {name:'YouTube: ElevenLabs tutorial',url:'https://www.youtube.com/results?search_query=elevenlabs+tutorial+beginners',icon:'▶️',bg:'#ffe0d8',tc:'#801810'},
+          {name:'Voice over scripts to practice',url:'https://voices.com/blog/voice-over-scripts/',icon:'📝',bg:'#ffe0d8',tc:'#801810'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Build a demo reel',
+        desc:'Create a 90-second demo: 10 seconds of each style. Upload to YouTube as "AI Voiceover Demo." This is your CV.',
+        color:'#f8fff0', bar:'#3a7a40',
+        resources:[
+          {name:'Descript — free audio editor',url:'https://descript.com',icon:'✂️',bg:'#e0f5d0',tc:'#1a4808'},
+          {name:'Audacity — free audio recording',url:'https://audacityteam.org',icon:'🎵',bg:'#e0f5d0',tc:'#1a4808'},
+          {name:'Canva — create demo reel thumbnail',url:'https://canva.com',icon:'🖼️',bg:'#e0f5d0',tc:'#1a4808'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'List on Fiverr and ACX',
+        desc:'Fiverr: ads, explainers, intros. ACX: narrate audiobooks. Start at $30 per finished minute of audio.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Fiverr — voiceover gigs',url:'https://fiverr.com/categories/music-audio/voice-overs',icon:'💰',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'ACX — Amazon audiobook marketplace',url:'https://acx.com',icon:'📚',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Voices.com — voice talent platform',url:'https://voices.com',icon:'🎤',bg:'#ece8fe',tc:'#4a1a80'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Corporate narration + retainers',
+        desc:'E-learning companies and training platforms need ongoing narration. $1,500–$5,000/mo per retainer client.',
+        color:'#fff0d0', bar:'#c07820',
+        resources:[
+          {name:'LinkedIn — pitch e-learning companies',url:'https://linkedin.com',icon:'👔',bg:'#fff0c0',tc:'#7a4000'},
+          {name:'Coursera for Business — B2B',url:'https://coursera.org/business',icon:'🎓',bg:'#fff0c0',tc:'#7a4000'},
+          {name:'Corporate narration rate guide',url:'https://www.voices.com/blog/voice-over-rates/',icon:'📊',bg:'#fff0c0',tc:'#7a4000'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'ElevenLabs',url:'https://elevenlabs.io',icon:'🎙️',bg:'#fee8e0'},
+      {name:'Murf.ai',url:'https://murf.ai',icon:'🔊',bg:'#e8f0fe'},
+      {name:'Descript',url:'https://descript.com',icon:'✂️',bg:'#e8fee8'},
+      {name:'ACX',url:'https://acx.com',icon:'📚',bg:'#f0e8fe'},
+      {name:'Fiverr',url:'https://fiverr.com',icon:'💰',bg:'#fff0e8'},
+    ],
+    tips:[
+      {icon:'🎧',title:'Quality over quantity',text:'One perfect demo reel with 3 great samples beats 20 mediocre ones. Spend time on your demo — it does all the selling.'},
+      {icon:'📧',title:'Pitch indie podcasters',text:'Find podcasts under 10k listeners. Offer to produce their intro/outro. It\'s a small job that turns into referrals.'},
+      {icon:'💬',title:'Reply speed = more clients',text:'On Fiverr, respond within 1 hour. Fast replies boost your ranking and clients choose you over slower competitors.'},
+    ]
+  },
+  {
+    id:'chatbot', emoji:'🧠', name:'AI Chatbot Builder', num:'05',
+    tagline:'Build bots once — businesses pay you every month forever',
+    quote:'"I built a bot for my local hair salon in 3 hours. She pays me $200/month to keep it running." — Lisa, chatbot builder',
+    level:'Intermediate', levelColor:'#1a7a40',
+    accent:'#1a7a40', accentLight:'#d8f5e8', accentBorder:'#80d0a0', textDark:'#083020',
+    earn:[{label:'Starter',val:'$800/mo',pct:20},{label:'Growing',val:'$3,000/mo',pct:45},{label:'Expert',val:'$12,000/mo',pct:100}],
+    vibe:'one build, monthly pay',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Learn Voiceflow in 1 week',
+        desc:'Complete their free course online. Build a sample FAQ bot for a fake coffee shop. You learn by doing.',
+        color:'#d8f5e8', bar:'#1a7a40',
+        resources:[
+          {name:'Voiceflow Academy — free course',url:'https://voiceflow.com/academy',icon:'🎓',bg:'#c8f0d8',tc:'#084018'},
+          {name:'Botpress — free chatbot builder',url:'https://botpress.com',icon:'🤖',bg:'#c8f0d8',tc:'#084018'},
+          {name:'YouTube: Voiceflow beginner',url:'https://www.youtube.com/results?search_query=voiceflow+tutorial+2024',icon:'▶️',bg:'#c8f0d8',tc:'#084018'},
+          {name:'OpenAI API docs',url:'https://platform.openai.com/docs',icon:'📖',bg:'#c8f0d8',tc:'#084018'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Build one real bot for free',
+        desc:'Pick a real local business — salon, dentist, yoga studio. Build their FAQ bot for FREE in exchange for a testimonial.',
+        color:'#fff0d0', bar:'#c07820',
+        resources:[
+          {name:'Zapier — connect bot to services',url:'https://zapier.com',icon:'⚡',bg:'#ffe8b8',tc:'#604000'},
+          {name:'Typeform — build intake forms',url:'https://typeform.com',icon:'📋',bg:'#ffe8b8',tc:'#604000'},
+          {name:'Calendly — add booking to bots',url:'https://calendly.com',icon:'📅',bg:'#ffe8b8',tc:'#604000'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Charge setup + monthly fee',
+        desc:'Show the testimonial. Charge $500–$1,500 to build + $100–$300/mo to maintain. 5 clients = $500–$1,500/mo passive.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'LinkedIn — find local business owners',url:'https://linkedin.com',icon:'💼',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Bark.com — find service clients',url:'https://bark.com',icon:'🔍',bg:'#ece8fe',tc:'#4a1a80'},
+          {name:'Cold email templates for chatbot sales',url:'https://www.google.com/search?q=chatbot+cold+email+template+small+business',icon:'✉️',bg:'#ece8fe',tc:'#4a1a80'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Custom GPT agents + API builds',
+        desc:'Connect chatbots to CRMs, Slack, WhatsApp. Charge $3,000–$15,000. These are full AI systems, not just FAQ bots.',
+        color:'#fee8e0', bar:'#c03820',
+        resources:[
+          {name:'Make.com — advanced automation',url:'https://make.com',icon:'⚙️',bg:'#ffe0d0',tc:'#801810'},
+          {name:'n8n — open source automation',url:'https://n8n.io',icon:'🔧',bg:'#ffe0d0',tc:'#801810'},
+          {name:'Anthropic Claude API',url:'https://anthropic.com/api',icon:'🤖',bg:'#ffe0d0',tc:'#801810'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Voiceflow',url:'https://voiceflow.com',icon:'🤖',bg:'#d8f5e8'},
+      {name:'Botpress',url:'https://botpress.com',icon:'💬',bg:'#e8f0fe'},
+      {name:'OpenAI API',url:'https://platform.openai.com',icon:'⚡',bg:'#f0e8fe'},
+      {name:'Zapier',url:'https://zapier.com',icon:'🔗',bg:'#fff0e8'},
+      {name:'Make.com',url:'https://make.com',icon:'⚙️',bg:'#e8fee8'},
+    ],
+    tips:[
+      {icon:'🎁',title:'Free builds = paid clients',text:'Give away your first 2–3 bots to get real testimonials. "I built this for a dental office, here are the results" closes every sale.'},
+      {icon:'💎',title:'Recurring beats one-time',text:'Always charge a monthly maintenance fee. Even $100/mo per client adds up fast. 10 clients = $1,000/mo while you sleep.'},
+      {icon:'🤝',title:'Partner with web designers',text:'Web designers have clients who need chatbots. Offer 20% referral fee. They send you business, you split the revenue.'},
+    ]
+  },
+  {
+    id:'data', emoji:'📊', name:'AI Data Analyst', num:'06',
+    tagline:'Turn messy spreadsheets into clear stories — get paid to be the translator',
+    quote:'"I upload spreadsheets into AI and get insights in minutes. My clients think I\'m a wizard." — Kezia, data analyst',
+    level:'Intermediate', levelColor:'#a06010',
+    accent:'#a06010', accentLight:'#fff0c0', accentBorder:'#e8b040', textDark:'#3a1a00',
+    earn:[{label:'Starter',val:'$600/mo',pct:15},{label:'Growing',val:'$3,000/mo',pct:40},{label:'Expert',val:'$10,000/mo',pct:100}],
+    vibe:'feels like detective work',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Ask AI questions about data',
+        desc:'Upload a free CSV to Julius AI or ChatGPT. Ask it: "What are the top trends?" "Which product sells most?" Practice daily.',
+        color:'#fff0c0', bar:'#a06010',
+        resources:[
+          {name:'Julius AI — analyze data with AI',url:'https://julius.ai',icon:'📊',bg:'#fce8a0',tc:'#603000'},
+          {name:'ChatGPT Data Analysis (free)',url:'https://chat.openai.com',icon:'💬',bg:'#fce8a0',tc:'#603000'},
+          {name:'Kaggle — free datasets to practice',url:'https://kaggle.com/datasets',icon:'📁',bg:'#fce8a0',tc:'#603000'},
+          {name:'Google Data Analytics Certificate',url:'https://grow.google/certificates/data-analytics/',icon:'🎓',bg:'#fce8a0',tc:'#603000'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create 2 full analysis reports',
+        desc:'Download a Kaggle dataset. Analyze it with AI. Write a beautiful report with charts and insights. Post to LinkedIn.',
+        color:'#e8f8e8', bar:'#3a7a40',
+        resources:[
+          {name:'Google Sheets — free spreadsheets',url:'https://sheets.google.com',icon:'📑',bg:'#d0f0d0',tc:'#1a4808'},
+          {name:'Tableau Public — free data viz',url:'https://public.tableau.com',icon:'📈',bg:'#d0f0d0',tc:'#1a4808'},
+          {name:'Canva — design report covers',url:'https://canva.com',icon:'🎨',bg:'#d0f0d0',tc:'#1a4808'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Offer $150–$500 one-time reports',
+        desc:'Reddit communities for small e-commerce sellers are gold. Post: "I\'ll analyze your Shopify data for $150." Real results, real clients.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Reddit r/Entrepreneur — find clients',url:'https://reddit.com/r/entrepreneur',icon:'🌐',bg:'#e8e0fe',tc:'#401870'},
+          {name:'Reddit r/smallbusiness',url:'https://reddit.com/r/smallbusiness',icon:'🏪',bg:'#e8e0fe',tc:'#401870'},
+          {name:'Contra — freelance platform',url:'https://contra.com',icon:'💼',bg:'#e8e0fe',tc:'#401870'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Monthly dashboards + retainers',
+        desc:'Build a live Looker Studio or Tableau dashboard. Charge $2,000–$6,000/mo. 3 clients = $6,000–$18,000/mo.',
+        color:'#ffe8e0', bar:'#c03820',
+        resources:[
+          {name:'Looker Studio — free Google tool',url:'https://lookerstudio.google.com',icon:'📊',bg:'#ffd8c8',tc:'#801010'},
+          {name:'Power BI — Microsoft BI tool',url:'https://powerbi.microsoft.com',icon:'⚡',bg:'#ffd8c8',tc:'#801010'},
+          {name:'Datacamp — data skills courses',url:'https://datacamp.com',icon:'🎓',bg:'#ffd8c8',tc:'#801010'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Julius AI',url:'https://julius.ai',icon:'📊',bg:'#fff0c0'},
+      {name:'Tableau',url:'https://tableau.com',icon:'📈',bg:'#e8f0fe'},
+      {name:'Google Sheets',url:'https://sheets.google.com',icon:'📑',bg:'#e8fee8'},
+      {name:'Kaggle',url:'https://kaggle.com',icon:'📁',bg:'#f0e8fe'},
+      {name:'Looker Studio',url:'https://lookerstudio.google.com',icon:'🔍',bg:'#fee8e8'},
+    ],
+    tips:[
+      {icon:'🎯',title:'Sell the insight, not the data',text:'"Your Tuesday sales are 40% higher when you send an email Monday" is worth money. Numbers alone mean nothing.'},
+      {icon:'📊',title:'Tableau Public is free',text:'Build 3 beautiful public dashboards on Tableau Public. Link them from LinkedIn. They\'re better than any résumé.'},
+      {icon:'🛒',title:'E-commerce is perfect',text:'Shopify and Etsy sellers have tons of data and no time to read it. They pay happily for someone to tell them what it means.'},
+    ]
+  },
+  {
+    id:'video', emoji:'📹', name:'Faceless AI Video Creator', num:'07',
+    tagline:'Build a YouTube channel without ever showing your face',
+    quote:'"My YouTube channel is 100% AI-made. I\'ve never shown my face. I\'m monetized now." — Jamie, faceless creator',
+    level:'Beginner–Mid', levelColor:'#1a40a0',
+    accent:'#1a40a0', accentLight:'#dce8fe', accentBorder:'#80a0e8', textDark:'#08183a',
+    earn:[{label:'Starter',val:'$200/mo',pct:8},{label:'Growing',val:'$2,000/mo',pct:35},{label:'Expert',val:'$15,000/mo',pct:100}],
+    vibe:'post while kids sleep',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Pick your niche and study it',
+        desc:'Best niches: AI tips, budgeting for moms, health facts, history stories, motivational content. Watch the top 5 channels.',
+        color:'#dce8fe', bar:'#1a40a0',
+        resources:[
+          {name:'VidIQ — find winning niches free',url:'https://vidiq.com',icon:'🔍',bg:'#c8d8fe',tc:'#081060'},
+          {name:'TubeBuddy — YouTube research',url:'https://tubebuddy.com',icon:'📊',bg:'#c8d8fe',tc:'#081060'},
+          {name:'YouTube Trending — niche ideas',url:'https://www.youtube.com/feed/trending',icon:'🔥',bg:'#c8d8fe',tc:'#081060'},
+          {name:'Niche research guide',url:'https://www.youtube.com/results?search_query=faceless+youtube+niche+2024',icon:'▶️',bg:'#c8d8fe',tc:'#081060'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Build your AI video pipeline',
+        desc:'Claude writes the script → ElevenLabs narrates it → Pictory creates visuals → CapCut adds captions. First video in 2 hours.',
+        color:'#d8f5e8', bar:'#1a7a40',
+        resources:[
+          {name:'Pictory — script to video',url:'https://pictory.ai',icon:'🎬',bg:'#c0f0d0',tc:'#084018'},
+          {name:'ElevenLabs — AI voice',url:'https://elevenlabs.io',icon:'🎙️',bg:'#c0f0d0',tc:'#084018'},
+          {name:'CapCut — free video editor',url:'https://capcut.com',icon:'✂️',bg:'#c0f0d0',tc:'#084018'},
+          {name:'Claude — script writing',url:'https://claude.ai',icon:'✍️',bg:'#c0f0d0',tc:'#084018'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Post consistently and monetize',
+        desc:'3 videos/week for 90 days. Use Shorts for faster growth. 1,000 subscribers + 4,000 watch hours = YouTube Partner Program.',
+        color:'#fff0c0', bar:'#c07820',
+        resources:[
+          {name:'YouTube Partner Program',url:'https://support.google.com/youtube/answer/72851',icon:'💰',bg:'#fce8a0',tc:'#603000'},
+          {name:'Amazon Associates — affiliate links',url:'https://affiliate-program.amazon.com',icon:'🔗',bg:'#fce8a0',tc:'#603000'},
+          {name:'YouTube Studio — analytics',url:'https://studio.youtube.com',icon:'📈',bg:'#fce8a0',tc:'#603000'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Sponsorships + sell the channel',
+        desc:'Channels with 10k+ subs get sponsors: $500–$5k per video. 50k+ sub channels can be sold for $20k–$100k+.',
+        color:'#fce8f0', bar:'#d4537e',
+        resources:[
+          {name:'Grapevine — find brand deals',url:'https://grapevine.io',icon:'🍇',bg:'#f8d0e0',tc:'#801040'},
+          {name:'Influencer Marketing Hub',url:'https://influencermarketinghub.com',icon:'📊',bg:'#f8d0e0',tc:'#801040'},
+          {name:'Flippa — sell your channel',url:'https://flippa.com',icon:'💎',bg:'#f8d0e0',tc:'#801040'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Pictory',url:'https://pictory.ai',icon:'🎬',bg:'#dce8fe'},
+      {name:'ElevenLabs',url:'https://elevenlabs.io',icon:'🎙️',bg:'#e8fee8'},
+      {name:'CapCut',url:'https://capcut.com',icon:'✂️',bg:'#fee8f0'},
+      {name:'HeyGen',url:'https://heygen.com',icon:'👤',bg:'#f0e8fe'},
+      {name:'Runway',url:'https://runwayml.com',icon:'🎥',bg:'#fff0e8'},
+    ],
+    tips:[
+      {icon:'🎯',title:'Consistency beats quality at first',text:'Post 3x/week for 90 days, even if videos aren\'t perfect. The algorithm rewards consistency more than perfection.'},
+      {icon:'📱',title:'Shorts = faster growth',text:'Post every long video as a 60-second Short too. Shorts can get 100k views in 48 hours and convert to channel subscribers.'},
+      {icon:'💡',title:'Steal topics, not content',text:'Find your niche\'s most-viewed videos. Make YOUR version with AI. Same topic, your angle. This is how every channel starts.'},
+    ]
+  },
+  {
+    id:'educator', emoji:'🎓', name:'AI Tools Educator', num:'08',
+    tagline:'Teach what you\'re learning — your journey IS your product',
+    quote:'"I started posting what I was learning about AI. 3 months later I sold a $97 course to 200 people." — Nadia, educator',
+    level:'Beginner', levelColor:'#7030a0',
+    accent:'#7030a0', accentLight:'#ede0fe', accentBorder:'#c080e0', textDark:'#280840',
+    earn:[{label:'Starter',val:'$500/mo',pct:12},{label:'Growing',val:'$3,000/mo',pct:38},{label:'Expert',val:'$15,000/mo',pct:100}],
+    vibe:'teach from your sofa',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Document your AI learning in public',
+        desc:'Post ONE thing you learn about AI tools every day. Instagram, TikTok, or LinkedIn. People love "learning in public" content.',
+        color:'#ede0fe', bar:'#7030a0',
+        resources:[
+          {name:'Instagram — post daily tips',url:'https://instagram.com',icon:'📸',bg:'#e0d0fe',tc:'#400870'},
+          {name:'TikTok — short AI tutorials',url:'https://tiktok.com',icon:'🎵',bg:'#e0d0fe',tc:'#400870'},
+          {name:'LinkedIn — professional audience',url:'https://linkedin.com',icon:'👔',bg:'#e0d0fe',tc:'#400870'},
+          {name:'Canva — make pretty posts fast',url:'https://canva.com',icon:'🎨',bg:'#e0d0fe',tc:'#400870'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create your first mini-course',
+        desc:'Compile your 10 best posts into a Notion guide. Record it with Loom. Sell for $27 on Gumroad. It doesn\'t need to be perfect.',
+        color:'#fdf0e8', bar:'#f48060',
+        resources:[
+          {name:'Gumroad — sell digital products',url:'https://gumroad.com',icon:'🛍️',bg:'#ffe0c0',tc:'#803000'},
+          {name:'Notion — build your course',url:'https://notion.so',icon:'📝',bg:'#ffe0c0',tc:'#803000'},
+          {name:'Loom — record screen tutorials',url:'https://loom.com',icon:'🎬',bg:'#ffe0c0',tc:'#803000'},
+          {name:'Canva — create workbooks',url:'https://canva.com',icon:'📚',bg:'#ffe0c0',tc:'#803000'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Run live Zoom workshops',
+        desc:'"AI for Complete Beginners — $99, this Saturday, 60 min." Post on Instagram. 10 sign-ups = $990 for 1 hour of your time.',
+        color:'#e8f8e8', bar:'#3a7a40',
+        resources:[
+          {name:'Zoom — host workshops free',url:'https://zoom.us',icon:'💻',bg:'#d0f0d0',tc:'#1a4808'},
+          {name:'Eventbrite — sell workshop tickets',url:'https://eventbrite.com',icon:'🎟️',bg:'#d0f0d0',tc:'#1a4808'},
+          {name:'Stan.store — creator selling page',url:'https://stan.store',icon:'⭐',bg:'#d0f0d0',tc:'#1a4808'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Corporate AI training programs',
+        desc:'Companies pay $2,000–$10,000 for a half-day AI workshop for their team. One Zoom call per week = life-changing income.',
+        color:'#fff0c0', bar:'#c07820',
+        resources:[
+          {name:'Teachable — professional course platform',url:'https://teachable.com',icon:'🎓',bg:'#fce8a0',tc:'#603000'},
+          {name:'Thinkific — build online school',url:'https://thinkific.com',icon:'🏫',bg:'#fce8a0',tc:'#603000'},
+          {name:'LinkedIn Learning — pitch corporate',url:'https://linkedin.com/learning',icon:'💼',bg:'#fce8a0',tc:'#603000'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Teachable',url:'https://teachable.com',icon:'🎓',bg:'#ede0fe'},
+      {name:'Loom',url:'https://loom.com',icon:'🎬',bg:'#dce8fe'},
+      {name:'Gumroad',url:'https://gumroad.com',icon:'🛍️',bg:'#e8fee8'},
+      {name:'Notion',url:'https://notion.so',icon:'📝',bg:'#f0e8fe'},
+      {name:'Stan.store',url:'https://stan.store',icon:'⭐',bg:'#fff0e8'},
+    ],
+    tips:[
+      {icon:'🪞',title:'You don\'t need to be an expert',text:'"I\'m 2 weeks ahead of you and here\'s what I learned" is MORE relatable than a polished expert. Beginners love learning from beginners.'},
+      {icon:'📱',title:'Instagram Reels = free marketing',text:'Turn every lesson into a 30-second Reel. "3 AI prompts that saved me 2 hours today" — these go viral and bring you students.'},
+      {icon:'🎁',title:'Free value first',text:'Give away your best tip every week for free. People who get value from your free content buy your paid stuff without hesitation.'},
+    ]
+  },
+  {
+    id:'automation', emoji:'⚙️', name:'AI Automation Consultant', num:'09',
+    tagline:'Automate someone\'s nightmare — they\'ll pay you forever for the relief',
+    quote:'"I saved a small business 15 hours a week. They pay me $1,500/month to keep it running." — Rachel, automation consultant',
+    level:'Intermediate', levelColor:'#107840',
+    accent:'#107840', accentLight:'#d0f5e0', accentBorder:'#60c080', textDark:'#042818',
+    earn:[{label:'Starter',val:'$1,000/mo',pct:20},{label:'Growing',val:'$5,000/mo',pct:55},{label:'Expert',val:'$15,000/mo',pct:100}],
+    vibe:'results they can see immediately',
+    stages:[
+      {
+        stage:'Week 1–2', week:'START', title:'Automate your own life first',
+        desc:'Sign up for Zapier free. Set up 5 automations for yourself: email sorting, social posting, reminders. Feel the power yourself.',
+        color:'#d0f5e0', bar:'#107840',
+        resources:[
+          {name:'Zapier — free tier to start',url:'https://zapier.com',icon:'⚡',bg:'#b8f0d0',tc:'#044018'},
+          {name:'Make.com — free visual automation',url:'https://make.com',icon:'🔄',bg:'#b8f0d0',tc:'#044018'},
+          {name:'Zapier University — free learning',url:'https://learn.zapier.com',icon:'🎓',bg:'#b8f0d0',tc:'#044018'},
+          {name:'YouTube: Zapier beginners 2024',url:'https://www.youtube.com/results?search_query=zapier+tutorial+beginners+2024',icon:'▶️',bg:'#b8f0d0',tc:'#044018'},
+        ]
+      },
+      {
+        stage:'Week 3–4', week:'BUILD', title:'Create 3 proven automation templates',
+        desc:'Build these three: (1) New lead → CRM + email. (2) Invoice generation. (3) Social media scheduling. These solve real pain.',
+        color:'#fff0c0', bar:'#c07820',
+        resources:[
+          {name:'Airtable — free database/CRM',url:'https://airtable.com',icon:'📋',bg:'#ffe8a8',tc:'#604000'},
+          {name:'Notion — project management',url:'https://notion.so',icon:'📝',bg:'#ffe8a8',tc:'#604000'},
+          {name:'Buffer — social media scheduling',url:'https://buffer.com',icon:'📱',bg:'#ffe8a8',tc:'#604000'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Free audits → paying clients',
+        desc:'"I\'ll audit your workflow for free in 30 min and show you 3 time-saving wins." Post this offer. Close at $750–$2,000 to implement.',
+        color:'#dce8fe', bar:'#1a40a0',
+        resources:[
+          {name:'LinkedIn — find small biz owners',url:'https://linkedin.com',icon:'💼',bg:'#c8d8fe',tc:'#081060'},
+          {name:'Loom — record audit walkthroughs',url:'https://loom.com',icon:'🎬',bg:'#c8d8fe',tc:'#081060'},
+          {name:'Calendly — book free audit calls',url:'https://calendly.com',icon:'📅',bg:'#c8d8fe',tc:'#081060'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Full AI ops systems for companies',
+        desc:'End-to-end automation: HR, sales, customer service, reporting. $5,000–$20,000 per project + monthly retainers.',
+        color:'#fee8e0', bar:'#c03820',
+        resources:[
+          {name:'n8n — advanced open-source automation',url:'https://n8n.io',icon:'🔧',bg:'#ffd8c8',tc:'#801810'},
+          {name:'Make.com enterprise docs',url:'https://make.com/en/help',icon:'⚙️',bg:'#ffd8c8',tc:'#801810'},
+          {name:'AI Business Automation courses',url:'https://www.udemy.com/courses/search/?src=ukw&q=AI+business+automation',icon:'🎓',bg:'#ffd8c8',tc:'#801810'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Zapier',url:'https://zapier.com',icon:'⚡',bg:'#d0f5e0'},
+      {name:'Make.com',url:'https://make.com',icon:'🔄',bg:'#dce8fe'},
+      {name:'n8n',url:'https://n8n.io',icon:'🔧',bg:'#fee8f0'},
+      {name:'Airtable',url:'https://airtable.com',icon:'📋',bg:'#fff0e8'},
+      {name:'Notion',url:'https://notion.so',icon:'📝',bg:'#f0e8fe'},
+    ],
+    tips:[
+      {icon:'🎯',title:'One great case study closes deals',text:'"I saved this Etsy shop owner 12 hours/week" with a before/after breakdown is worth more than any sales pitch.'},
+      {icon:'💰',title:'Price the ROI, not your time',text:'If you save them $5,000/month in labor, charging $1,500/month is a bargain. Always frame it as "you save 3x what you pay me."'},
+      {icon:'🤖',title:'AI makes you more powerful',text:'Use Claude to map out automation flows before you build. Tell it "I have a photography business, what should I automate?" — it plans it all.'},
+    ]
+  },
+  {
+    id:'labeling', emoji:'🏷️', name:'AI Data Labeling', num:'10',
+    tagline:'Help train tomorrow\'s AI — get paid while it learns from you',
+    quote:'"I did AI data labeling while watching TV in the evenings. Easiest $800 extra I ever made." — Donna, part-time labeler',
+    level:'Beginner', levelColor:'#a04010',
+    accent:'#a04010', accentLight:'#ffe8d0', accentBorder:'#e8a060', textDark:'#3a1000',
+    earn:[{label:'Starter',val:'$400/mo',pct:20},{label:'Growing',val:'$1,200/mo',pct:55},{label:'Expert',val:'$3,000/mo',pct:100}],
+    vibe:'watch TV while you earn',
+    stages:[
+      {
+        stage:'Day 1', week:'START', title:'Sign up and start earning today',
+        desc:'Remotasks and Outlier let you start within hours. Complete the qualification quiz (30–60 min). First tasks available immediately.',
+        color:'#ffe8d0', bar:'#a04010',
+        resources:[
+          {name:'Remotasks — start today',url:'https://remotasks.com',icon:'🏷️',bg:'#ffd8b0',tc:'#602000'},
+          {name:'Outlier — AI training tasks',url:'https://outlier.ai',icon:'🤖',bg:'#ffd8b0',tc:'#602000'},
+          {name:'Surge AI — higher pay tasks',url:'https://surge.ai',icon:'⚡',bg:'#ffd8b0',tc:'#602000'},
+          {name:'YouTube: how to start Remotasks',url:'https://www.youtube.com/results?search_query=remotasks+getting+started+2024',icon:'▶️',bg:'#ffd8b0',tc:'#602000'},
+        ]
+      },
+      {
+        stage:'Week 1–2', week:'BUILD', title:'Focus on high-paying task types',
+        desc:'Basic image labeling pays less. Pivot to: RLHF (rating AI responses), code review, complex reasoning. These pay 2–3x more.',
+        color:'#d8f5e8', bar:'#1a7a40',
+        resources:[
+          {name:'Scale AI — higher tier work',url:'https://scale.com',icon:'📊',bg:'#c0f0d0',tc:'#084018'},
+          {name:'Appen — language + AI tasks',url:'https://appen.com',icon:'💬',bg:'#c0f0d0',tc:'#084018'},
+          {name:'RLHF guide — what it is',url:'https://www.google.com/search?q=RLHF+data+labeling+how+to+start',icon:'📖',bg:'#c0f0d0',tc:'#084018'},
+        ]
+      },
+      {
+        stage:'Month 2', week:'SELL', title:'Apply to premium platforms',
+        desc:'Once you have 4 weeks of history, apply to Scale AI and Surge. Both pay significantly more and have longer projects.',
+        color:'#dce8fe', bar:'#1a40a0',
+        resources:[
+          {name:'Scale AI — apply here',url:'https://scale.com/spellbook',icon:'🏆',bg:'#c8d8fe',tc:'#081060'},
+          {name:'Toloka — Yandex data tasks',url:'https://toloka.ai',icon:'🌐',bg:'#c8d8fe',tc:'#081060'},
+          {name:'Data annotation communities on Reddit',url:'https://reddit.com/r/beermoney',icon:'💬',bg:'#c8d8fe',tc:'#081060'},
+        ]
+      },
+      {
+        stage:'Month 3–6', week:'EXPERT', title:'Team lead and QA reviewer',
+        desc:'Apply for reviewer/QA roles — you check other labelers\' work. $40–$80/hr. These are fully remote, asynchronous positions.',
+        color:'#f0ecfe', bar:'#7c3aab',
+        resources:[
+          {name:'Scale AI careers — senior roles',url:'https://scale.com/careers',icon:'💼',bg:'#e8e0fe',tc:'#401870'},
+          {name:'Surge AI team lead program',url:'https://surge.ai',icon:'⭐',bg:'#e8e0fe',tc:'#401870'},
+          {name:'Outlier expert positions',url:'https://outlier.ai',icon:'🎓',bg:'#e8e0fe',tc:'#401870'},
+        ]
+      },
+    ],
+    tools:[
+      {name:'Scale AI',url:'https://scale.com',icon:'📊',bg:'#ffe8d0'},
+      {name:'Remotasks',url:'https://remotasks.com',icon:'🏷️',bg:'#e8fee8'},
+      {name:'Outlier',url:'https://outlier.ai',icon:'🤖',bg:'#dce8fe'},
+      {name:'Surge AI',url:'https://surge.ai',icon:'⚡',bg:'#f0e8fe'},
+      {name:'Appen',url:'https://appen.com',icon:'💬',bg:'#fff0e8'},
+    ],
+    tips:[
+      {icon:'⚡',title:'Start TODAY — literally',text:'No portfolio. No setup. No investment. You can be earning within 2 hours of reading this. Go sign up right now.'},
+      {icon:'🧠',title:'RLHF = the highest pay',text:'Reinforcement Learning from Human Feedback tasks — rating and improving AI conversations — pay 3–5x basic labeling. Learn this first.'},
+      {icon:'📈',title:'Track your hourly rate',text:'Time each task type. Some pay $5/hr, others $40/hr. Only do the high-paying ones once you identify them. Quality over quantity.'},
+    ]
+  }
+];
+
+// Build navigation
+const navTabs = document.getElementById('navTabs');
+HUSTLES.forEach(h => {
+  const btn = document.createElement('button');
+  btn.className = 'nav-tab';
+  btn.textContent = h.emoji + ' ' + h.name.split(' ').slice(0,2).join(' ');
+  btn.onclick = () => {
+    document.getElementById('hs-' + h.id).scrollIntoView({behavior:'smooth'});
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+  };
+  navTabs.appendChild(btn);
+});
+
+// Build index grid
+const indexGrid = document.getElementById('indexGrid');
+HUSTLES.forEach(h => {
+  const a = document.createElement('a');
+  a.className = 'index-card';
+  a.href = '#hs-' + h.id;
+  a.innerHTML = `<span style="font-size:28px">${h.emoji}</span><div><div class="ic-name">${h.name}</div><div class="ic-earn">${h.earn[2].val}/mo potential</div></div>`;
+  indexGrid.appendChild(a);
+});
+
+// Build hustle sections
+const sectionsEl = document.getElementById('hustleSections');
+HUSTLES.forEach((h, hi) => {
+  const sec = document.createElement('section');
+  sec.className = 'hustle-section reveal';
+  sec.id = 'hs-' + h.id;
+
+  const roadmapCards = h.stages.map((s, si) => `
+    <div class="rm-card reveal" style="--delay:${si*80}ms">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:${s.bar};border-radius:3px 3px 0 0"></div>
+      <div class="rm-stage" style="color:${h.accent}">${s.stage}</div>
+      <div class="rm-week" style="color:${h.accent}">${s.week}</div>
+      <div class="rm-title">${s.title}</div>
+      <div class="rm-desc">${s.desc}</div>
+      <div class="rm-resources">
+        <div class="rm-res-label">Resources</div>
+        ${s.resources.map(r => `
+          <a href="${r.url}" target="_blank" rel="noopener" class="rm-res-link" style="background:${r.bg};color:${r.tc}">
+            <span class="rm-res-icon" style="background:rgba(255,255,255,0.6)">${r.icon}</span>
+            <span>${r.name}</span>
+            <span style="margin-left:auto;opacity:0.5;font-size:11px">↗</span>
+          </a>`).join('')}
+      </div>
+    </div>`).join('');
+
+  const toolChips = h.tools.map(t => `
+    <a href="${t.url}" target="_blank" rel="noopener" class="tool-chip">
+      <span class="tool-icon" style="background:${t.bg}">${t.icon}</span>
+      ${t.name}
+    </a>`).join('');
+
+  const incBars = h.earn.map((e, i) => `
+    <div class="income-bar-row">
+      <div class="income-bar-label">${e.label}</div>
+      <div class="income-bar-track">
+        <div class="income-bar-fill" data-pct="${e.pct}" style="width:0%;background:${i===0?h.accent+'88':i===1?h.accent+'bb':h.accent}">
+          ${e.val}
+        </div>
+      </div>
+    </div>`).join('');
+
+  const tipCards = h.tips.map(t => `
+    <div class="tip-card">
+      <div class="tip-icon">${t.icon}</div>
+      <div class="tip-title">${t.title}</div>
+      <div class="tip-text">${t.text}</div>
+    </div>`).join('');
+
+  const isEven = hi % 2 === 0;
+  sec.innerHTML = `
+    <div class="hs-header">
+      <div class="hs-emoji-wrap" style="background:${h.accentLight};border:1px solid ${h.accentBorder}">${h.emoji}</div>
+      <div class="hs-title-block">
+        <div class="hs-num" style="color:${h.accent}">hustle ${h.num} of 10
+          <span class="level-badge" style="background:${h.accentLight};color:${h.textDark};border:1px solid ${h.accentBorder}">${h.level}</span>
+        </div>
+        <div class="hs-name" style="color:${h.textDark}">${h.name}</div>
+        <div class="hs-tagline">${h.tagline}</div>
+        <div class="hs-quote" style="background:${h.accentLight};border-left:3px solid ${h.accent};color:${h.textDark}">${h.quote}</div>
+      </div>
+    </div>
+    <div class="hs-divider"></div>
+
+    <div style="font-family:'Caveat',cursive;font-size:19px;color:${h.accent};margin-bottom:16px">your step-by-step roadmap</div>
+    <div class="roadmap-grid">${roadmapCards}</div>
+
+    <div class="tools-section reveal">
+      <div class="tools-title">tools you'll use</div>
+      <div class="tools-grid">${toolChips}</div>
+    </div>
+
+    <div class="income-track reveal">
+      <div class="income-title">income potential over time</div>
+      <div class="income-bars">${incBars}</div>
+    </div>
+
+    <div style="font-family:'Caveat',cursive;font-size:19px;color:${h.accent};margin-bottom:14px">real talk: tips that actually help</div>
+    <div class="tips-block reveal">${tipCards}</div>
+
+    <div style="text-align:center;padding:20px 0 8px">
+      <div style="font-family:'Caveat',cursive;font-size:15px;color:var(--muted)">vibe: ${h.vibe}</div>
+    </div>
+
+    <div class="floral-divider">
+      <svg viewBox="0 0 48 48" width="36" height="36" style="opacity:0.5">
+        <ellipse cx="24" cy="10" rx="9" ry="5" fill="${h.accent}" opacity=".5" transform="rotate(0 24 10)"/>
+        <ellipse cx="36" cy="19" rx="9" ry="5" fill="${h.accent}" opacity=".4" transform="rotate(60 36 19)"/>
+        <ellipse cx="36" cy="33" rx="9" ry="5" fill="${h.accent}" opacity=".4" transform="rotate(120 36 33)"/>
+        <ellipse cx="24" cy="42" rx="9" ry="5" fill="${h.accent}" opacity=".5" transform="rotate(180 24 42)"/>
+        <ellipse cx="12" cy="33" rx="9" ry="5" fill="${h.accent}" opacity=".4" transform="rotate(240 12 33)"/>
+        <ellipse cx="12" cy="19" rx="9" ry="5" fill="${h.accent}" opacity=".4" transform="rotate(300 12 19)"/>
+        <circle cx="24" cy="26" r="7" fill="#fff8f3"/>
+        <circle cx="24" cy="26" r="3.5" fill="${h.accent}" opacity=".7"/>
+      </svg>
+    </div>`;
+
+  sectionsEl.appendChild(sec);
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      // animate income bars
+      const bars = e.target.querySelectorAll('.income-bar-fill');
+      bars.forEach(b => {
+        setTimeout(() => {
+          b.style.transition = 'width 1s cubic-bezier(.4,0,.2,1)';
+          b.style.width = b.dataset.pct + '%';
+        }, 200);
+      });
+    }
+  });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Active nav on scroll
+const sections = document.querySelectorAll('.hustle-section');
+const navTabEls = document.querySelectorAll('.nav-tab');
+const scrollObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const idx = Array.from(sections).indexOf(e.target);
+      if(idx >= 0){
+        navTabEls.forEach(t => t.classList.remove('active'));
+        if(navTabEls[idx]) navTabEls[idx].classList.add('active');
+      }
+    }
+  });
+}, {threshold: 0.3});
+sections.forEach(s => scrollObserver.observe(s));
+</script>
+</body>
+</html>
